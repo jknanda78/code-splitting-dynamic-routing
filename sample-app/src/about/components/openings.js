@@ -1,3 +1,3 @@
 import React from 'react';
 
-export default () => <h2>Current Openings</h2>
+export default () => <div><h2>Current Openings</h2><p>Content for Openings</p></div>

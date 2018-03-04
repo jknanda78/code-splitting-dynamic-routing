@@ -4,7 +4,8 @@ import RoutesComponent from '../components/routes';
 const mapStateToProps = (state, props) => {
   return {
     ...props,
-    routes: state.appReducer.routes
+    routes: state.appReducer.routes,
+    subRoutes: state.appReducer.subRoutes
   }
 };
 

@@ -21,8 +21,10 @@ const Contact = props => (
   </DynamicImport>
 );
 
-export default [
-  <Route exact path="/" component={Home} key="home-component" />,
-  <Route exact path="/about" component={About} key="about-component" />,
-  <Route exact path="/contact" component={Contact} key="contact-component" />
-];
+export default {
+  routes: [
+    <Route exact path="/" component={Home} key="home-component" />,
+    <Route path="/about" component={About} key="about-component" />,
+    <Route exact path="/contact" component={Contact} key="contact-component" />
+  ]
+};

@@ -1,6 +1,5 @@
 import { Component } from 'react';
 import { addRoutes } from '../app/actions/creators';
-// import store from '../app/store';
 
 const injectRoutes = (routes, store) => {
   store.dispatch(addRoutes(routes));

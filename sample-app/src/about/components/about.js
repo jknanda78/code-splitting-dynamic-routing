@@ -14,5 +14,8 @@ export default ({ navigate }) => (
                 </li>
             </ul>
         </nav>
+        <div>
+            Content for about us
+        </div>
     </div>
 );

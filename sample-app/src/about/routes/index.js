@@ -15,7 +15,9 @@ const Team = props => (
     </DynamicImport>
 );
 
-export default [
-    <Route exact path="/about/team" component={Team} key="about-team-component" />,
-    <Route exact path="/about/openings" component={Openings} key="about-openings-component" />
-];
+export default {
+    subRoutes: [
+        <Route exact path="/about/team" component={Team} key="about-team-component" />,
+        <Route exact path="/about/openings" component={Openings} key="about-openings-component" />
+    ]
+};
