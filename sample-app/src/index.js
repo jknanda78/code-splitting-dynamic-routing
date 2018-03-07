@@ -1,9 +1,10 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { store } from './app';
+// import { store } from './app';
 import DynamicImport from './utilities/dynamicImport';
 import registerServiceWorker from './registerServiceWorker';
 import Loading from './utilities/loading';
+import store from './app/store';
 
 const App = props => (
   <DynamicImport load={() => import(/* webpackChunkName: "App" */ './app')}>
@@ -11,5 +12,5 @@ const App = props => (
   </DynamicImport>
 );
 
-render(<App store={store} />, document.getElementById('root'));
+render(<App store={store}/>, document.getElementById('root'));
 registerServiceWorker();

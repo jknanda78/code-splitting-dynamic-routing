@@ -1,9 +1,9 @@
 import React from 'react'; //eslint-disable-line
 import { AppRoot as component, AppRoutes as routes } from './routes';
-import store from './store';
+import reducers from './reducers';
 
 export {
   component,
   routes,
-  store
+  reducers
 };

@@ -1,23 +1,37 @@
-import { createStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware, combineReducers } from 'redux';
 import { createLogger } from 'redux-logger';
 import createSagaMiddleware from 'redux-saga';
 import { createBrowserHistory } from 'history';
-import { routerMiddleware } from 'react-router-redux';
-import reducers from './reducers';
+import { routerReducer as routing, routerMiddleware } from 'react-router-redux';
 import rootSaga from './sagas';
+
+const sagaMiddleware = createSagaMiddleware();
+
+const createReducer = asyncReducers => (
+  combineReducers({
+    routing,
+    ...asyncReducers
+  })
+);
 
 export const history = createBrowserHistory();
 
-const sagaMiddleware = createSagaMiddleware();
-const store = createStore(reducers, 
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(), //Chrome Redux Devtools
-  applyMiddleware(
-    createLogger(),
-    routerMiddleware(history),
-    sagaMiddleware
-  )
-);
+export const injectReducers = (store, name, asyncReducer) => {
+  store.asyncReducers[name] = asyncReducer;
+  store.replaceReducer(createReducer(store.asyncReducers));
+};
 
-sagaMiddleware.run(rootSaga);
+export default (() => {
+  const store = createStore(createReducer(), 
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+    applyMiddleware(
+      createLogger(),
+      routerMiddleware(history),
+      sagaMiddleware
+    )
+  );
 
-export default store;
+  store.asyncReducers = {};
+  sagaMiddleware.run(rootSaga);
+  return store;
+})();

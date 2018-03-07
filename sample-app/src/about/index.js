@@ -1,9 +1,11 @@
 import routes from './routes';
 import component from './containers/about';
-import { store } from '../app';
+import reducers from './reducers';
+import sagas from './sagas';
 
 export {
   component,
   routes,
-  store
+  reducers,
+  sagas
 };
