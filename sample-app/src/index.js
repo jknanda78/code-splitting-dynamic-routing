@@ -1,6 +1,5 @@
 import React from 'react';
 import { render } from 'react-dom';
-// import { store } from './app';
 import DynamicImport from './utilities/dynamicImport';
 import registerServiceWorker from './registerServiceWorker';
 import Loading from './utilities/loading';
