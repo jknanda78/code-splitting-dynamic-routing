@@ -4,7 +4,7 @@ import DynamicImport from '../../utilities/dynamicImport';
 import Loading from '../../utilities/loading';
 
 const Home = props => (
-  <DynamicImport load={() => import(/* webpackChunkName: "Home" */ '../../home/components')}>
+  <DynamicImport load={() => import(/* webpackChunkName: "Home" */ '../../home')}>
     {(Component) => Component === null ? <Loading /> : <Component {...props} />}
   </DynamicImport>
 );
@@ -16,7 +16,7 @@ const About = props => (
 );
 
 const Contact = props => (
-  <DynamicImport load={() => import(/* webpackChunkName: "Contact" */ '../../contact/components')}>
+  <DynamicImport load={() => import(/* webpackChunkName: "Contact" */ '../../contact')}>
     {(Component) => Component === null ? <Loading /> : <Component {...props} />}
   </DynamicImport>
 );
