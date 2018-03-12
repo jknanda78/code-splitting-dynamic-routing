@@ -17,14 +17,14 @@ export default class DynamicImport extends Component {
     load().then(module => {
       const { routes, component, reducers } = module;
 
-      if (routes) {
-        injectRoutes(routes, store);
-      }
-
       if (reducers) {
         reducers.forEach(reducer => {
           injectReducers(store, reducer.name, reducer.fn);
         });
+      }
+
+      if (routes) {
+        injectRoutes(routes, store);
       }
 
       this.setState({
