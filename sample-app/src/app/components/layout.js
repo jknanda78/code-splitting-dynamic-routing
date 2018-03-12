@@ -4,10 +4,8 @@ import Nav from '../containers/nav';
 export default props => (
   <main>
     <header>
-      <Nav/>
+      <Nav />
     </header>
-    <section>
-      {props.children}
-    </section>
+    <section>{props.children}</section>
   </main>
-)
+);

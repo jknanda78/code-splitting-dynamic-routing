@@ -5,4 +5,4 @@ export default () => (
   <div>
     <img src={loadingImg} alt="loading" />
   </div>
-)
+);

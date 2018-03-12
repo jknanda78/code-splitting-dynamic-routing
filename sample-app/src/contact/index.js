@@ -1,5 +1,3 @@
 import component from './components';
 
-export {
-  component
-};
+export { component };

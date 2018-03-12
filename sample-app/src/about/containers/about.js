@@ -3,7 +3,7 @@ import { navigateToScreen } from '../../app/actions/creators';
 import AboutComponent from '../components/about';
 
 const mapDispatchToProps = dispatch => ({
-  navigate: (path) => {
+  navigate: path => {
     dispatch(navigateToScreen(path));
   }
 });

@@ -3,7 +3,7 @@ export default (stateRoutes, newRoutes) => {
     if (updatedRoute.findIndex(item => item.key === route.key) === -1) {
       updatedRoute.push(route);
     }
-  
+
     return updatedRoute;
   }, stateRoutes);
-}
+};

@@ -13,7 +13,5 @@ function navigate(action) {
 }
 
 export default function* rootSaga() {
-  yield all([
-    takeEvery(NAVIGATE_TO_SCREEN, navigate)
-  ]);
+  yield all([takeEvery(NAVIGATE_TO_SCREEN, navigate)]);
 }

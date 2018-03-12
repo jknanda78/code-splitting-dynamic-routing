@@ -6,7 +6,7 @@ const mapStateToProps = (state, props) => {
     ...props,
     routes: state.appReducer.routes,
     subRoutes: state.appReducer.subRoutes
-  }
+  };
 };
 
 export default connect(mapStateToProps)(RoutesComponent);
