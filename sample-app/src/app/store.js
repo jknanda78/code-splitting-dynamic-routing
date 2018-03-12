@@ -14,7 +14,7 @@ const createReducer = asyncReducers => (
   })
 );
 
-export const history = createBrowserHistory();
+export const history = createBrowserHistory({ basename: process.env.PUBLIC_URL });
 
 export const injectReducers = (store, name, asyncReducer) => {
   store.asyncReducers[name] = asyncReducer;

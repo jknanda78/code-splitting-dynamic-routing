@@ -17,7 +17,7 @@ const Team = props => (
 
 export default {
     subRoutes: [
-        <Route exact path={process.env.PUBLIC_URL + '/about/team'} component={Team} key="about-team-component" />,
-        <Route exact path={process.env.PUBLIC_URL + '/about/openings'} component={Openings} key="about-openings-component" />
+        <Route exact path='/about/team' component={Team} key="about-team-component" />,
+        <Route exact path='/about/openings' component={Openings} key="about-openings-component" />
     ]
 };

@@ -7,10 +7,10 @@ export default ({ navigate }) => (
         <nav>
             <ul>
                 <li>
-                    <ButtonAsLink type="button" onClick={e => navigate(process.env.PUBLIC_URL + '/about/team')}>Team</ButtonAsLink>
+                    <ButtonAsLink type="button" onClick={e => navigate('/about/team')}>Team</ButtonAsLink>
                 </li>
                 <li>
-                    <ButtonAsLink type="button" onClick={e => navigate(process.env.PUBLIC_URL + '/about/openings')}>Openings</ButtonAsLink>
+                    <ButtonAsLink type="button" onClick={e => navigate('/about/openings')}>Openings</ButtonAsLink>
                 </li>
             </ul>
         </nav>

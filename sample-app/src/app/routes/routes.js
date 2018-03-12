@@ -23,8 +23,8 @@ const Contact = props => (
 
 export default {
   routes: [
-    <Route exact path={process.env.PUBLIC_URL + '/'} component={Home} key="home-component" />,
-    <Route path={process.env.PUBLIC_URL + '/about'} component={About} key="about-component" />,
-    <Route exact path={process.env.PUBLIC_URL + '/contact'} component={Contact} key="contact-component" />
+    <Route exact path='/' component={Home} key="home-component" />,
+    <Route path='/about' component={About} key="about-component" />,
+    <Route exact path='/contact' component={Contact} key="contact-component" />
   ]
 };
