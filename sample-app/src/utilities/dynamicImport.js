@@ -1,6 +1,13 @@
 import { Component } from 'react';
-import { addRoutes } from '../app/actions/creators';
+import { addRoutes, navigateToScreen } from '../app/actions/creators';
 import store, { injectReducers } from '../app/store';
+
+window.onload = function() {
+  const path = window.location.pathname;
+  if (path.split('/').length > 2) {
+    store.dispatch(navigateToScreen(path));
+  }
+};
 
 const injectRoutes = (routes, store) => {
   store.dispatch(addRoutes(routes));

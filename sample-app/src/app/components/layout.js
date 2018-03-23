@@ -1,7 +1,8 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import Nav from '../containers/nav';
 
-export default props => (
+const Component = props => (
   <main>
     <header>
       <Nav />
@@ -9,3 +10,5 @@ export default props => (
     <section>{props.children}</section>
   </main>
 );
+
+export default withRouter(Component);

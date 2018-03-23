@@ -6,7 +6,17 @@ import Loading from '../../utilities/loading';
 const Openings = props => (
   <DynamicImport
     load={() =>
-      import(/* webpackChunkName: "Openings" */ '../../about/components/openings')
+      import(/* webpackChunkName: "Openings" */ '../../about/containers/openings')
+    }
+  >
+    {Component => (Component === null ? <Loading /> : <Component {...props} />)}
+  </DynamicImport>
+);
+
+const OpeningsInfo = props => (
+  <DynamicImport
+    load={() =>
+      import(/* webpackChunkName: "OpeningsInfo" */ '../../about/components/openings-info')
     }
   >
     {Component => (Component === null ? <Loading /> : <Component {...props} />)}
@@ -36,6 +46,12 @@ export default {
       path="/about/openings"
       component={Openings}
       key="about-openings-component"
+    />,
+    <Route
+      exact
+      path="/about/openings/:id"
+      component={OpeningsInfo}
+      key="about-openings-info-component"
     />
   ]
 };
