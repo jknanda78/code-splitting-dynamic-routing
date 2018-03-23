@@ -1,2 +1,0 @@
-webpackJsonp([3],{165:function(e,n,t){"use strict";Object.defineProperty(n,"__esModule",{value:!0});var u=t(166);t.d(n,"component",function(){return u.a})},166:function(e,n,t){"use strict";var u=t(0),a=t.n(u),c=function(){return a.a.createElement("div",null,a.a.createElement("h2",null,"Contact us"),a.a.createElement("p",null,"Content for Contact us"))};n.a=c}});
-//# sourceMappingURL=Contact.1c27aaa8.chunk.js.map

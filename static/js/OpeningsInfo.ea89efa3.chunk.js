@@ -1,0 +1,2 @@
+webpackJsonp([6],{161:function(e,n,t){"use strict";Object.defineProperty(n,"__esModule",{value:!0});var a=t(0),l=t.n(a),r=function(e){return l.a.createElement("div",null,l.a.createElement("h2",null,"Currently looking at opening ",e.match.params.id))};n.default=r}});
+//# sourceMappingURL=OpeningsInfo.ea89efa3.chunk.js.map

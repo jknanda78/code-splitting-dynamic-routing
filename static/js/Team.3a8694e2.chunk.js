@@ -1,2 +1,0 @@
-webpackJsonp([4],{143:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var a=n(0),l=n.n(a);t.default=function(){return l.a.createElement("div",null,l.a.createElement("h2",null,"Our Team"),l.a.createElement("p",null,"Content for our team"))}}});
-//# sourceMappingURL=Team.3a8694e2.chunk.js.map
