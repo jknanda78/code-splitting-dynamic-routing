@@ -7,11 +7,11 @@ import store, { injectReducers } from '../app/store';
  * Sub-Routes needs to load asynchronously
  */
 window.onload = function() {
-  const path = window.location.pathname;
-  const len =
-    process.env.NODE_ENV === 'development'
-      ? path.split('/').length
-      : path.replace('/code-splitting-dynamic-routing', '').split('/').length;
+  const pathname = window.location.pathname;
+  const ifprod = process.env.NODE_ENV !== 'development';
+  const prodpath = pathname.replace('/code-splitting-dynamic-routing', '');
+  const path = ifprod ? prodpath : pathname;
+  const len = path.split('/').length;
 
   if (len > 2) {
     store.dispatch(navigateToScreen(path));
