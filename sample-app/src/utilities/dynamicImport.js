@@ -8,9 +8,12 @@ import store, { injectReducers } from '../app/store';
  */
 window.onload = function() {
   const path = window.location.pathname;
-  const len = process.env.NODE_ENV === 'development' ? 2 : 3;
+  const len =
+    process.env.NODE_ENV === 'development'
+      ? path.split('/').length
+      : path.replace('/code-splitting-dynamic-routing', '').split('/').length;
 
-  if (path.split('/').length > len) {
+  if (len > 2) {
     store.dispatch(navigateToScreen(path));
   }
 };
